@@ -1,0 +1,15 @@
+{
+  "name": "megaproject",
+  "version": "1.0.0",
+  "description": "\"back end of youtube lookalike app and twitter embedded",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "backend",
+    "javaScript"
+  ],
+  "author": "Rakshit Agrawal",
+  "license": "ISC"
+}
