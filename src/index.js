@@ -1,9 +1,10 @@
 // require("dotenv").config()
 import dotenv from "dotenv"
+import cookieParser from "cookie-parser";
+import cors from "cors"
 import mongoose from "mongoose";
 import connectDB from "./db/index.js";
-  
-
+  import { app } from "./app.js";
 dotenv.config(
     {
         path:'./env'
@@ -11,7 +12,20 @@ dotenv.config(
     }
 )
 
-connectDB();
+app.use(cors);
+
+
+
+connectDB()
+    .then(() => {
+        app.listen(process.env.PORT || 8000, () => {
+            console.log(`Server running on port ${process.env.PORT || 8000}`)
+        })
+
+})
+    .catch((error) => {
+    console.log(`Error connecting to the database or in MONGO DB Connection ${error}`); 
+})
 
 
 
