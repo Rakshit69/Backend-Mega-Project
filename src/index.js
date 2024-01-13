@@ -1,7 +1,5 @@
 // require("dotenv").config()
 import dotenv from "dotenv"
-import cookieParser from "cookie-parser";
-import cors from "cors"
 import mongoose from "mongoose";
 import connectDB from "./db/index.js";
   import { app } from "./app.js";
@@ -12,7 +10,7 @@ dotenv.config(
     }
 )
 
-app.use(cors);
+
 
 
 
