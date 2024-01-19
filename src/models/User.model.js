@@ -39,6 +39,9 @@ const userSchema = new Schema(
 				ref: "Video",
 			},
 		],
+		refreshToken: {
+			type:String,
+		}
 	},
 	{
 		timestamps: true,
